@@ -5,6 +5,7 @@ class Probabilities:
     def contact(self):
         discord = 'diortemred'
         telegram = 'ttps://t.me/TokensSupplies'
+        discord_invite = 'https://discord.gg/2xdDx27Cjf'
         email = 'diorhosting@gmail.com'
 
         return discord, telegram, email
@@ -27,8 +28,6 @@ class Probabilities:
 
 
 if __name__ == "__main__":
-    probabilities = Probabilities()
-    discord, telegram, email = probabilities.contact()
-    age, occupation, hobbies = probabilities.life()
-    languages, learning, ide, preferred_language = probabilities.programming()
-
+life()
+programming()
+contact()
