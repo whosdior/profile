@@ -1,33 +1,75 @@
-class Probabilities:
+class ClutchBets:
     def __init__(self):
-        self.alias = ['diortemred', 'Whosdior']
+        self.company = {
+            "name": "ClutchBets",
+            "website": "https://clutchbets.online/",
+            "support_email": "support@clutchbets.online"
+        }
 
-    def contact(self):
-        discord = 'diortemred'
-        telegram = 'ttps://t.me/TokensSupplies'
-        discord_invite = 'https://discord.gg/2xdDx27Cjf'
-        email = 'diorhosting@gmail.com'
+        self.leadership = {
+            "CEO": {
+                "name": "whodior",
+                "aliases": ["diortemred", "Whosdior"],
+                "discord": "main.go."
+            }
+        }
 
-        return discord, telegram, email
+        self.contact = {
+            "Main Discord": "diorsfakealt",
+            "CEO Discord": self.leadership["CEO"]["discord"],
+            "Support Email": self.company["support_email"]
+        }
 
-    def life(self):
-        age = 15
-        occupation = 'Student (Studying Computing & Networking)'
-        hobbies = ['Programming', 'Reading']
+        self.platform = {
+            "type": "Betting / Picks Platform",
+            "focus": ["Outlier Bets", "Analytics", "User Picks"],
+            "status": "Active"
+        }
 
-        return age, occupation, hobbies
+        self.features = [
+            "User pick tracking",
+            "Performance analytics",
+            "Optimized dashboard",
+            "Mobile + desktop support"
+        ]
 
-    def programming(self):
-        languages = ['(Golang)', 'Python']
-        learning = ['C# CPP']
-        ide = 'Visual Studio Code'
+    def summary(self):
+        return {
+            "Company": self.company["name"],
+            "Website": self.company["website"],
+            "CEO": self.leadership["CEO"]["name"]
+        }
 
-        preferred_language = languages[0]
+    def display(self):
+        print("=" * 50)
+        print("CLUTCHBETS OVERVIEW")
+        print("=" * 50)
 
-        return languages, learning, ide, preferred_language
+        print("\nCompany:")
+        for k, v in self.company.items():
+            print(f" {k}: {v}")
+
+        print("\nLeadership:")
+        ceo = self.leadership["CEO"]
+        print(f" Name: {ceo['name']}")
+        print(f" Aliases: {', '.join(ceo['aliases'])}")
+        print(f" Discord: {ceo['discord']}")
+
+        print("\nContact:")
+        for k, v in self.contact.items():
+            print(f" {k}: {v}")
+
+        print("\nPlatform:")
+        for k, v in self.platform.items():
+            print(f" {k}: {v}")
+
+        print("\nFeatures:")
+        for f in self.features:
+            print(f" - {f}")
+
+        print("=" * 50)
 
 
 if __name__ == "__main__":
-life()
-programming()
-contact()
+    clutch = ClutchBets()
+    clutch.display()
